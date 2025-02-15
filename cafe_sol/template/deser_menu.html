@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deser</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'desers_menu/css/style.css'  %}">
+</head>
+<body>
+
+    <div class="main">
+        <div class="header">
+            <div class="text_header">cafe sol</div>
+
+        </div>
+
+        <div class="content">
+
+            <div class="cafes_box">
+            <!-- template tag's -->
+                {% for deser in deser %}
+
+                    <div class="cafe">
+
+                        <div class="con">
+                            <div class="button"><button>{{deser.deser_name}}</button></div>
+                            <div class="fee">{{deser.fee}}</div>
+                        </div>    
+                        <div class="describtion" dir="rtl"><div class="dicrib_cont">{{deser.deser_description}}</div></div>
+                        
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+    
+</body>
+</html>

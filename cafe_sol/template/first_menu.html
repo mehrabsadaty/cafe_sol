@@ -1,0 +1,32 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafesol</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'first_menu/css/style.css' %}">
+</head>
+<body>
+    <div class="main">
+
+        <div class="menu">
+            <div class="heder">
+                <h1 class="head">sol cafe</h1>
+            </div>
+            <div class="buttons">
+                <div class="button_cafe">
+                    <a href="{% url 'cafes_menu:cafe' %}"><button class="h1">قهوه ها</button></a>
+                </div>
+                <div class="button_cafe">
+                    <a href="{% url 'desers_menu:deser' %}"><button class="h1">دسر ها</button></a> 
+                </div>
+
+            </div>
+               
+        </div>
+
+    </div>
+   
+</body>
+</html>
