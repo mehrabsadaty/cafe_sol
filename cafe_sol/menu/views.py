@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from .models import Cafe
-from django.db import models
+from django.views import View
 
-class Menu(models.Model):
+class Menu(View):
     def get(request):
         coffees = Cafe.objects.all()
         
         for cafe in coffees :
             cafe.fee =  str(cafe.fee) + ',000'  
-        return render (request , 'cafes_menu/cafe_menu.html' , {'cafe' : coffees})
+        return render (request , 'menu/cafe_menu.html' , {'cafe' : coffees})
