@@ -1,7 +1,7 @@
 from django.urls import path , include
-from .views import menu
+from .views import Menu
 
 app_name = 'cafes_menu'
 urlpatterns = [
-    path ('cafe/' , menu, name='cafe')
+    path ('cafe/' , Menu.as_view(), name='cafe')
 ]
