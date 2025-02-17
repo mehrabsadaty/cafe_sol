@@ -2,6 +2,13 @@ from django.shortcuts import render
 from .models import Cafe, Deser
 from django.views import View
 
+
+
+class HomeView(View):
+    def get(request):
+        return render(request, 'menu/first_menu.html')
+
+
 class CoffeesView(View):
     def get(request):
         coffees = Cafe.objects.all()
