@@ -1,7 +1,8 @@
 from django.urls import path , include
-from .views import Menu
+from .views import CoffeesView, DessertsView
 
 app_name = 'menu'
 urlpatterns = [
-    path ('cafe/' , Menu.as_view(), name='cafe'),
+    path ('cafe/' , CoffeesView.as_view(), name='cafe'),
+    path ('dessert/' , DessertsView.as_view(), name='dessert'),
 ]
