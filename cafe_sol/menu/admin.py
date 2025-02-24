@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cafe
-# Register your models here.
+from .models import Cafe, Deser
 
 admin.site.register(Cafe)
+admin.site.register(Deser)
