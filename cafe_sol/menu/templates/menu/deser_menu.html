@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deser</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'menu/css/style.css'  %}">
 </head>
 <body>
 
-    <div class="main">
+    <div class="main" style="background-image: url('{% static "menu/image/photo.jpg" %}');">
         <div class="header">
             <div class="text_header">cafe sol</div>
 
@@ -23,15 +23,16 @@
                     <div class="cafe">
 
                         <div class="con">
-                            <div class="button"><button>{{deser.deser_name}}</button></div>
-                            <div class="fee">{{deser.fee}}</div>
+                            <div class="button"><button>{{deser.name}}</button></div>
+                            <div class="fee">{{deser.price}}</div>
                         </div>    
-                        <div class="describtion" dir="rtl"><div class="dicrib_cont">{{deser.deser_description}}</div></div>
+                        <div class="describtion" dir="rtl"><div class="dicrib_cont">{{deser.describtion}}</div></div>
                         
                     </div>
 
                 {% endfor %}
-
+                
+                <a href={% url "menu:home"%}><button>بازگشت به منوی اصلی</button></a>
             </div>
 
         </div>

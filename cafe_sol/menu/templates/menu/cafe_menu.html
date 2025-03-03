@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
+    <title>Cafe</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'menu/css/style.css'  %}">
 </head>
 <body>
 
-    <div class="main">
+    <div class="main" style="background-image: url('{% static "menu/image/photo.jpg" %}');">
         <div class="header">
             <div class="text_header">cafe sol</div>
 
@@ -23,14 +23,16 @@
                     <div class="cafe">
 
                         <div class="con">
-                            <div class="button"><button>{{cafe.cafe_name}}</button></div>
-                            <div class="fee">{{cafe.fee}}</div>
+                            <div class="button"><button>{{cafe.name}}</button></div>
+                            <div class="fee">{{cafe.price}}</div>
                         </div>    
-                        <div class="describtion" dir="rtl"><div class="dicrib_cont">{{cafe.cafe_describtion}}</div></div>
+                        <div class="describtion" dir="rtl"><div class="dicrib_cont">{{cafe.describtion}}</div></div>
                         
                     </div>
 
                 {% endfor %}
+                <a href={% url "menu:home"%}><button>بازگشت به منوی اصلی</button></a>
+                
 
             </div>
 

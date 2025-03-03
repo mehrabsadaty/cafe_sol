@@ -21,7 +21,10 @@
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-image: url(/static/cafes_menu/img/mypic.jpg);
+    
+    /* background-color: red;  */
+    
+    
 
     display: flex;
     flex-direction: column;
@@ -64,6 +67,8 @@
 .content {
     width: 80%;
     height: 90%;
+
+    font-size: 20px;
 
     background-color: rgb(0, 0, 0 , 0.6);
 
@@ -108,7 +113,7 @@
 }
                                         /* .cafe inner seting */
 .describtion {
-    width: 70%;
+    width: 60%;
     height: 100%;
     
     display: flex;
@@ -119,7 +124,7 @@
     padding: 5px;
 }
 .con{
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -145,8 +150,9 @@
 button {
     width: 100%;
     color: wheat;
+    font-weight: bolder;
 
-    font-size: large;
+    font-size: 17px;
 
     background-color: #542f05;
     border: 0px solid wheat;
@@ -160,9 +166,12 @@ button {
     -o-border-radius: 10px;
 }
 button:active {
-
+    transform:scale(2px);
     box-shadow: 3px 3px 4px -1px inset black;
-
+    -webkit-transform:scale(2px);
+    -moz-transform:scale(2px);
+    -ms-transform:scale(2px);
+    -o-transform:scale(2px);
 }
 /* scroll setting */
 .content::-webkit-scrollbar {

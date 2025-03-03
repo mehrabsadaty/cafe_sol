@@ -15,7 +15,7 @@ class Cafe(models.Model):
 
 class Deser(models.Model):
     name = models.CharField(max_length=50)
-    description = models.TextField(null=True , blank=True)
+    describtion = models.TextField(null=True , blank=True)
     price = models.PositiveIntegerField(default=0)
 
     class Meta:
