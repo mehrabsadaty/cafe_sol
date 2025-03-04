@@ -17,6 +17,13 @@
         <div class="content">
 
             <div class="cafes_box">
+
+            <!-- <style>
+                @font-face {
+                    font-family: "tanha";
+                    src: ur("{% static "menu/font/Tanha.ttf"%}") format("truetype") ;
+                }
+            </style> -->
             <!-- template tag's -->
                 {% for deser in deser %}
 
@@ -32,7 +39,7 @@
 
                 {% endfor %}
                 
-                <a href={% url "menu:home"%}><button>بازگشت به منوی اصلی</button></a>
+                <a href={% url "menu:home"%}><button class="back">بازگشت به منوی اصلی</button></a>
             </div>
 
         </div>
